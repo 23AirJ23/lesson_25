@@ -1,0 +1,41 @@
+.form{
+   position: relative;
+}
+
+.input{
+   width: 50%;
+   height: 100%;
+   height: 50px;
+   transform: translateX(-110%);
+   transition: all 0.5s ease;
+   opacity: 0;
+   margin-left: 35px;
+   padding: 0 10px;
+}
+.form.active .input{
+   transform: translateX(0);
+   opacity: 1;
+   transition: all 0.5s ease;
+}
+
+.button{
+   position: absolute;
+   top: 10px;
+   left: 10px;
+   z-index: 50;
+   font-size: 25px;
+   cursor: pointer;
+}
+
+.button span:last-child{
+   display: block;
+}
+.form.active .button span:first-child{
+   display: block;
+}
+.button span:first-child{
+   display: none;
+}
+.form.active .button span:last-child{
+   display: none;
+}
